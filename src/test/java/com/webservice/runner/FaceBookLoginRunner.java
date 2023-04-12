@@ -1,4 +1,4 @@
-package comwebservice.runner;
+package com.webservice.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -10,5 +10,5 @@ import org.junit.runner.RunWith;
         features={"src/test/resources/facebook"},
         glue={"com.webservice.login"}
 )
-public class FbLoginRunner {
+public class FaceBookLoginRunner {
 }

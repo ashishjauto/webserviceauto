@@ -1,4 +1,4 @@
-package comwebservice.runner;
+package com.webservice.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
