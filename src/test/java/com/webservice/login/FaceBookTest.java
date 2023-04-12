@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
-public class FbLoginTest {
+public class FaceBookTest {
 
     @Given("^user is at the login page fo the application$")
     public void user_is_at_the_login_page_fo_the_application() throws Throwable {
