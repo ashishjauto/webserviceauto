@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class
 )
 @CucumberOptions(
-        features={"src/test/resources/onlineshopping"},
-        glue={"com.webservice.get"}
+        features={"src/test/resources/facebook"},
+        glue={"com.webservice.login"}
 )
-public class CarRunner {
+public class FbLoginRunner {
 }
