@@ -1,5 +1,6 @@
 package com.webservice.auto.get;
 
+import com.webservice.base.WebServiceBase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,16 +13,15 @@ import org.junit.Assert;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class UserGetById {
+public class UserGetById extends WebServiceBase {
 
     Response response;
-    private final String uri_GET="http://localhost:8080";
-   private int statusCode;
 
+    private int statusCode ;
 
     @Given("^I set GET employee by id service api endpoint$")
     public void i_set_get_employee_by_id_service_api_endpoint() throws Throwable {
-        RestAssured.baseURI=uri_GET;
+        System.out.println("set GET employee by id service api endpoint");
     }
 
     @When("^I set request Header with userid$")
@@ -30,7 +30,7 @@ public class UserGetById {
         response = RestAssured.
                 given().
                 accept(ContentType.JSON).
-                when().get(new URI("http://localhost:8080/users/1"));
+                when().get(new URI("/users/1"));
     }
 
 
@@ -41,7 +41,7 @@ public class UserGetById {
                 .given()
                 .accept(ContentType.JSON)
                 .when()
-                .get(new URI("http://localhost:8080/users/1"))
+                .get(new URI("/users/1"))
                 .thenReturn().statusCode();
 
 

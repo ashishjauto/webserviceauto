@@ -1,5 +1,6 @@
 package com.webservice.auto.get;
 
+import com.webservice.base.WebServiceBase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,7 +15,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 
-public class UserGet {
+public class UserGet extends WebServiceBase {
     Response response;
     private final String uri_GET="http://localhost:8080";
     private final String user_URI="/users";
@@ -41,7 +42,7 @@ public class UserGet {
         response = RestAssured.
                     given().
                     accept(ContentType.JSON).
-                    when().get(new URI("http://localhost:8080/users"));
+                    when().get(new URI("/users"));
 
 
 
@@ -54,12 +55,12 @@ public class UserGet {
                 .given()
                 .accept(ContentType.JSON)
                 .when()
-                .get(new URI("http://localhost:8080/users"))
+                .get(new URI("/users"))
                 .thenReturn().statusCode();
 
 
         Assert.assertEquals(HttpStatus.SC_OK,validDateStatusCode);
-        
+
 
     }
 }
