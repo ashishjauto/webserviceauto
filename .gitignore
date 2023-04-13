@@ -1,6 +1,6 @@
 
 .idea/*
-.gradle/*
+.gradle
 build/*
 .gradle/file-system.probe
 .gradle/buildOutputCleanup/outputFiles.bin
