@@ -60,5 +60,6 @@ public class UserGet {
 
         Assert.assertEquals(HttpStatus.SC_OK,validDateStatusCode);
         
+
     }
 }
