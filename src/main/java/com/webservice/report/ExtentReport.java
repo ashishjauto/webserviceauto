@@ -14,16 +14,16 @@ public class ExtentReport {
 
 
 
-    public synchronized static final ExtentReports initReporter(String name, String env, String app, String tool){
-        String key = String.format("%s_%s_%s_%s",name, env, app, tool);
+    public synchronized static final ExtentReports initReporter(String name, String env, String app){
+        String key = String.format("%s_%s_%s",name, env, app);
 
         ExtentReports er = reportMap.get(key);
         if(er == null){
             er = new ExtentReports(System.getProperty("user.dir") + "/test-output/"+key+".html", true);
             er.addSystemInfo("Host Name", "localhost")
                     .addSystemInfo("Environment", env)
-                    .addSystemInfo("Application", app)
-                    .addSystemInfo("tool", tool);
+                    .addSystemInfo("Application", app);
+
             reportMap.put(key,er);
         }
 

@@ -13,7 +13,7 @@ public class WebServiceBase {
         baseURI="http://localhost";
         port=8080;
         if (test == null) {
-            extent = ExtentReport.initReporter("TestAutomationReport", "non-prod", "DemoWebService", "rest-assured");
+            extent = ExtentReport.initReporter("TestAutomationReport", "non-prod", "DemoWebService" );
 
         }
 

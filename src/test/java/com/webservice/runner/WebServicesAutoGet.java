@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class
 )
 @CucumberOptions(
-        features={"src/test/resources/webservice/get"},
-        glue={"com.webservice.auto.get"}
+        features={"src/test/resources/webservice/get","src/test/resources/webservice/delete"},
+        glue={"com.webservice.auto.get","com.webservice.auto.delete"}
 )
 public class WebServicesAutoGet {
 }
