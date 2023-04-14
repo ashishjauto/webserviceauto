@@ -36,7 +36,7 @@ public class UserPost extends WebServiceBase {
 
         String postBody= "{\"name\":\"Jandoe\",\"birthDate\":\"1993-04-10\"}";
 
-         Response response=  
+         Response response=
 
 
                  given()
@@ -48,8 +48,8 @@ public class UserPost extends WebServiceBase {
                          .then()
                          .extract().response();
 
+        test.log(LogStatus.INFO, String.valueOf(response.statusCode()));
 
-        System.out.println(response.statusCode());
 
 
 
