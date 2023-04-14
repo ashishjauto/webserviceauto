@@ -33,10 +33,10 @@ public class UserDelete  extends WebServiceBase {
     public void deletion_operation_returns_http_response_code_200(int validateStatusCode) throws Throwable {
 
 
-        response = RestAssured.
+        statusCode = RestAssured.
                 given().
-                accept(ContentType.JSON).delete("/users/1");
-
+                accept(ContentType.JSON).delete("/users/1").thenReturn().statusCode();
+        test.log(LogStatus.INFO, String.valueOf(statusCode));
         quitReporter();
 
     }
