@@ -22,6 +22,8 @@ public class UserDelete  extends WebServiceBase {
     @Given("^I set DELETE employee service api endpoint$")
     public void i_set_delete_employee_service_api_endpoint() throws Throwable {
         test = extent.startTest("UserDelete");
+        test.log(LogStatus.INFO, "i_set_delete_employee_service_api_endpoint()");
+
     }
 
     @When("^I set DELETE HTTP request$")
@@ -37,7 +39,7 @@ public class UserDelete  extends WebServiceBase {
                 given().
                 accept(ContentType.JSON).delete("/users/1").thenReturn().statusCode();
         test.log(LogStatus.INFO, String.valueOf(statusCode));
-        quitReporter();
+
 
     }
 }

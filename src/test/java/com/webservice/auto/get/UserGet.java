@@ -62,6 +62,12 @@ public class UserGet extends WebServiceBase {
                 .thenReturn().statusCode();
 
 
+
+
+
+
+
+
         Assert.assertEquals(HttpStatus.SC_OK,validDateStatusCode);
 
 
