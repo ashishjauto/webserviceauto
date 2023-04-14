@@ -23,7 +23,10 @@ public class UserGetById extends WebServiceBase {
     @Given("^I set GET employee by id service api endpoint$")
     public void i_set_get_employee_by_id_service_api_endpoint() throws Throwable {
         test = extent.startTest("UserGetById");
-        System.out.println("set GET employee by id service api endpoint");
+
+
+        test.log(LogStatus.INFO, String.valueOf(statusCode));
+
     }
 
     @When("^I set request Header with userid$")
@@ -36,6 +39,9 @@ public class UserGetById extends WebServiceBase {
                 get(new URI("/1"))
                 .then()
                 .body("name", Matchers.equalToIgnoringCase("Adam"),"id",Matchers.equalTo(1));
+
+        test.log(LogStatus.INFO, String.valueOf(statusCode));
+
 
 
 
@@ -59,7 +65,7 @@ public class UserGetById extends WebServiceBase {
 
         test.log(LogStatus.INFO, String.valueOf(statusCode));
 
-        quitReporter();
+
 
     }
 

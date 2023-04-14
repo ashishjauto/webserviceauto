@@ -60,6 +60,5 @@ public class UserNotExist extends WebServiceBase {
 
         test.log(LogStatus.INFO, String.valueOf(statusCode));
 
-        quitReporter();
     }
 }

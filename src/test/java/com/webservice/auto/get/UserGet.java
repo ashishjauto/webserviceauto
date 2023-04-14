@@ -63,7 +63,7 @@ public class UserGet extends WebServiceBase {
 
 
         Assert.assertEquals(HttpStatus.SC_OK,validDateStatusCode);
-     quitReporter();
+
 
 
     }
